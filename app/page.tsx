@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default async function Home() {
 
-  fetch("http://localhost:3000/api/stocks");
+  // fetch("http://localhost:3000/api/stocks");
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
