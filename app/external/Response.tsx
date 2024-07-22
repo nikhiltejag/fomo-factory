@@ -15,3 +15,8 @@ export interface Response {
     "visitors": number,
     "volumePerVisitor": number
   }
+
+  export interface ExtendedResponse extends Response {
+    timestamp: number,
+    _id: string
+  }

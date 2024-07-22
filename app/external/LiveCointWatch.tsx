@@ -52,7 +52,7 @@ async function getStocks() {
 }
 
 // cron.schedule('*/1 * * * *', getStocks);
-cron.schedule('*/1 * * * *', () => console.log(new Date().toString()));
+// cron.schedule('*/1 * * * *', () => console.log(new Date().toString()));
 
 async function storeStocks(data: Response[]) {
   const client = new MongoClient(db_url);
