@@ -3,9 +3,18 @@ import { ExtendedResponse } from '../external/Response';
 import StockCard from './StockCard';
 
 const StocksPage = async () => {
-    const res = await fetch("http://localhost:3000/api/stocks", { cache: "no-cache" });
-    const data: ExtendedResponse[] = await res.json();
-
+    let data = []
+    try {
+        const response = await fetch('http://localhost:3000/api/stocks');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        console.log("api success")
+         data = await response.json();
+      } catch (error) {
+        console.error('Failed to fetch data:', error);
+        // Provide fallback data or handle the error
+      }
     return (
         <div className='w-[80%] ml-auto mr-auto mt-4 bg-[#293143] rounded-md'>
             {/* <div className='bg-gray-900 flex justify-center items-center min-h-screen'> */}
