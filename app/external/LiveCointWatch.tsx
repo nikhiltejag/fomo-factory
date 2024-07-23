@@ -51,8 +51,7 @@ async function getStocks() {
   console.log("Storing completed");
 }
 
-// cron.schedule('*/1 * * * *', getStocks);
-// cron.schedule('*/1 * * * *', () => console.log(new Date().toString()));
+cron.schedule('*/10 * * * * *', getStocks);
 
 async function storeStocks(data: Response[]) {
   const client = new MongoClient(db_url);

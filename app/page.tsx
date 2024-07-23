@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default async function Home() {
 
@@ -117,3 +118,4 @@ export default async function Home() {
     </main>
   );
 }
+redirect(`/stocks`);

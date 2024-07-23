@@ -20,7 +20,7 @@ const StockCard = (props: any) => {
                 <div className="flex items-center mb-4 justify-between">
                     <div className="mb-2">
                         <span className="text-gray-400">24H VOLUME</span>
-                        <p className="text-xl">{stock.volume}</p>
+                        <p className="text-xl">${stock.volume}</p>
                     </div>
                     <div className="mb-2">
                         <span className="text-gray-400">LIQUIDITY ±2%</span>
@@ -36,15 +36,15 @@ const StockCard = (props: any) => {
                 <div className='flex items-center mb-4 justify-between'>
                     <div className="mb-2">
                         <span className="text-gray-400">MARKETS</span>
-                        <p className="text-xl">{stock.markets}</p>
+                        <p className="text-xl">${stock.markets}</p>
                     </div>
                     <div className="mb-2">
                         <span className="text-gray-400">BIDS -2%</span>
-                        <p className="text-xl">{parseInt(stock.bidTotal).toFixed(2)}</p>
+                        <p className="text-xl">${parseInt(stock.bidTotal).toFixed(2)}</p>
                     </div>
                     <div>
                         <span className="text-gray-400">ASKS +2%</span>
-                        <p className="text-xl">{parseInt(stock.askTotal).toFixed(2)}</p>
+                        <p className="text-xl">${parseInt(stock.askTotal).toFixed(2)}</p>
                     </div>
                 </div>
             </div>
